@@ -1,17 +1,20 @@
 # package.json Notes
 
-## For React Applications
+# Author
+Eva Grace Smith
 
-To deploy your application at GitHub pages, you'll need to add a home page property to your package.json which points to the deployed base URL of your GitHub Pages site.
+## Deployed Web Pages:
 
-*NOTE: This will break deployments to other hosting services such as Netlify, Vercel, or AWS Amplify, so if you later wish to deploy there, remove this property completely.*
+[Elastic Beanstalk GUI installed](http://aws-gui-cloud-server-env.eba-pruayrzr.us-east-2.elasticbeanstalk.com/)
 
-```json
+[Elastic Beanstalk CLI installed ](http://aws-cloud-server-dev.us-east-2.elasticbeanstalk.com/hello?name=eva)
 {
-  "homepage": "https://yourname.github.io/repository-name"
+  "homepage": "https://github.com/EvaGraceSmith/aws-cloud-server"
 }
 ```
-
+### Collaboration
+Ryan Galloway
+Mark Smith
 ## Node / Express Applications
 
 ### For Tests
@@ -28,16 +31,5 @@ Your scripts section should have the following, so that you can easily run tests
 },
 ```
 
-### For NPM Modules
 
-If you are creating a module to deploy at NPM, you'll want a "bin" section that identifies the name of the global command to run and your .js file that runs when called.
 
-```json
-"bin": {
-    "fetch": "index.js"
-}
-```
-
-Additionally, that file should have as it's first line, so that it'll run without having to type "node filename.js" every time
-
-`#!/usr/bin/env node`
